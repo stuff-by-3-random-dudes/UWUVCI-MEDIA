@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using UWUVCI_MEDIA.Models;
+using UWUVCI_MEDIA.UI.Frames;
 
 namespace UWUVCI_MEDIA.UI.Windows
 {
@@ -21,7 +24,9 @@ namespace UWUVCI_MEDIA.UI.Windows
     {
         public MainWindow()
         {
-            InitializeComponent();
+        InitializeComponent();
+            load_frame.Content = new MainFrame();
+            //(FindResource("mvm") as MainViewModel).setMW(this);
         }
         private void ButtonCloseMenu_Click(object sender, RoutedEventArgs e)
         {
